@@ -1,20 +1,15 @@
+import 'package:front_etruco/pages/login_screen.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+void main() => runApp(MyApp());
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
+class MyApp extends StatefulWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello Ícaro!'),
-        ),
-      ),
+    return MaterialApp(
+      title: 'etruco.io',
+      theme: ThemeData(primarySwatch: Colors.deepOrange),
+      home: LoginPage(),
     );
   }
 }
