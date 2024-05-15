@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'etruco.io',
       theme: ThemeData(primarySwatch: Colors.deepOrange),
-      home: const LoginPage(),
+      home: const LoginScreen(),
     );
   }
 }
