@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+// ignore: unused_import
+import 'package:front_etruco/main.dart';
+import 'package:front_etruco/widget/botton.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,7 +12,7 @@ class MainApp extends StatelessWidget {
 
   // @override
   // Widget build(BuildContext context) {
-  //   return const MaterialApp(
+  //   return const MaterialApp('
   //     home: Scaffold(
   //       body: Center(
   //         child: Text('Hello Ícaro!'),
@@ -26,12 +29,12 @@ class MainApp extends StatelessWidget {
           title: Text('Lobby'),
         ),
         body: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(30.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               TextField(
-                decoration: decoration('Name'),
+                decoration: decoration(''),
                 //controller: controllerName,
               ),
               const SizedBox(height: 24),
@@ -56,6 +59,13 @@ class MainApp extends StatelessWidget {
               const SizedBox(
                 height: 32,
               ),
+              Botton(
+                title: 'Login',
+                onPressed: () {
+                  Navigator.pushNamed(context, '/login');
+                },
+                color: Colors.blueAccent,
+              )
               // ElevatedButton(
               //   onPressed: () {
               //     if (user == null) {
