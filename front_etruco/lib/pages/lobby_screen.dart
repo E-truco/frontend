@@ -19,7 +19,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Lobby'),
+          title: const Text('Lobby'),
         ),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
