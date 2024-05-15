@@ -3,10 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:front_etruco/main.dart';
 import 'package:front_etruco/widget/botton.dart';
 
-void main() {
-  runApp(const MainApp());
-}
-
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
@@ -26,7 +22,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Lobby'),
+          title: const Text('Lobby'),
         ),
         body: Padding(
           padding: const EdgeInsets.all(30.0),
