@@ -1,36 +1,32 @@
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login'),
+        title: const Text('Bem vindo ao E-Truco'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: Column(
           children: <Widget>[
-            TextField(
+            const TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                labelText: 'Usuário',
+                labelText: 'Escolha seu Nickname:',
               ),
             ),
-            SizedBox(height: 10),
-            TextField(
-              obscureText: true,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Senha',
-              ),
-            ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             ElevatedButton(
-              child: Text('Entrar'),
-              onPressed: () {
-
-              },
+              child: const Text('Criar Sala'),
+              onPressed: () {},
+            ),
+            ElevatedButton(
+              child: const Text('Entrar em Partida'),
+              onPressed: () {},
             ),
           ],
         ),
