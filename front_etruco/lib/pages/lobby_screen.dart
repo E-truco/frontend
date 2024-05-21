@@ -53,7 +53,7 @@ class MainApp extends StatelessWidget {
               //       );
               //     }),
               const SizedBox(
-                height: 32,
+                height: 30,
               ),
               Botton(
                 title: 'Login',
