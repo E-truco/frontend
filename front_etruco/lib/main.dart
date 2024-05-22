@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:front_etruco/pages/login_screen.dart'; // Certifique-se de importar o arquivo correto
+// ignore: unused_import
 import 'package:front_etruco/pages/lobby_screen.dart';
 
 void main() {

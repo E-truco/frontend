@@ -28,9 +28,10 @@ class LobbyScreen extends StatelessWidget {
                 )
               ]), //dividir em 20 80 (Saída e Status sala)
               TextField(
-                decoration: decoration(''),
+                decoration: decoration('Equipe 1'),
                 //controller: controllerName,
               ),
+
               const SizedBox(height: 24),
               TextField(
                 decoration: decoration('Age'),
@@ -38,21 +39,6 @@ class LobbyScreen extends StatelessWidget {
                 //controller: controllerAge,
               ),
               const SizedBox(height: 24),
-              // DateTimeField(
-              //     controller: controllerDate,
-              //     decoration: decoration('Birthday'),
-              //     format: DateFormat('yyyy-MM-dd'),
-              //     onShowPicker: (context, currentValue) {
-              //       return showDatePicker(
-              //         context: context,
-              //         initialDate: currentValue ?? DateTime.now(),
-              //         firstDate: DateTime(1900),
-              //         lastDate: DateTime(2100),
-              //       );
-              //     }),
-              const SizedBox(
-                height: 30,
-              ),
               Botton(
                 title: 'Login',
                 onPressed: () {
@@ -103,16 +89,18 @@ InputDecoration decoration(String label) {
 // }
 
 final exitColumn = Container(
+  color: Colors.red,
   padding: const EdgeInsets.fromLTRB(20, 30, 20, 20),
-  child: Column(
+  child: const Column(
     children: [
       Icon(Icons.exit_to_app, color: Color.fromARGB(255, 206, 64, 54)),
-      const Text('Saída'),
+      Text('Saída'),
     ],
   ),
 );
 
 final roomStatus = Container(
+    color: Colors.blue,
     padding: const EdgeInsets.fromLTRB(20, 30, 20, 20),
     child: Column(
       children: [
@@ -121,3 +109,11 @@ final roomStatus = Container(
         const Text('Senha:'), //Trazer informação Senha Sala
       ],
     ));
+
+final equipe1 = Container(
+  color: Colors.amber[200],
+);
+
+final equipe2 = Container(
+  color: Colors.cyan[300],
+);
