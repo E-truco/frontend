@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class Botton extends StatelessWidget {
   const Botton({
-    Key? key,
+    super.key,
     this.color,
     required this.title,
     required this.onPressed,
-  }) : super(key: key);
+  });
 
   final Color? color;
   final String title;
