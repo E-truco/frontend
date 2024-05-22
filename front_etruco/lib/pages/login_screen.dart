@@ -16,17 +16,19 @@ class LoginScreen extends StatelessWidget {
           children: [
             Image.asset(
               'lib/imagens/icon_cards.png',
-              width: 180,
-              height: 180,
+              width: 160,
+              height: 160,
             ),
             const Text('Etruco',
-                style: TextStyle(fontSize: 60, fontWeight: FontWeight.bold)),
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+            const SizedBox(height: 20),
             const TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Escolha seu Nickname:',
               ),
             ),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
