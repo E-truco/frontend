@@ -29,6 +29,15 @@ class MainApp extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+                SizedBox(
+                  width: 440,
+                  child: exitColumn,
+                ),
+                SizedBox.expand(
+                  child: roomStatus,
+                )
+              ]), //dividir em 20 80 (Saída e Status sala)
               TextField(
                 decoration: decoration(''),
                 //controller: controllerName,
@@ -88,18 +97,38 @@ InputDecoration decoration(String label) {
   );
 }
 
-  // void createUser() {
-  //   final newUser = User(
-  //     name: controllerName.text,
-  //     age: int.parse(controllerAge.text),
-  //     birthday: DateTime.parse(controllerDate.text),
-  //   );
-  //   UserService.createUser(newUser);
-  // }
+// void createUser() {
+//   final newUser = User(
+//     name: controllerName.text,
+//     age: int.parse(controllerAge.text),
+//     birthday: DateTime.parse(controllerDate.text),
+//   );
+//   UserService.createUser(newUser);
+// }
 
-  // void updateUser(User user) {
-  //   user.name = controllerName.text;
-  //   user.age = int.parse(controllerAge.text);
-  //   user.birthday = DateTime.parse(controllerDate.text);
-  //   UserService.updateUser(user);
-  // }
+// void updateUser(User user) {
+//   user.name = controllerName.text;
+//   user.age = int.parse(controllerAge.text);
+//   user.birthday = DateTime.parse(controllerDate.text);
+//   UserService.updateUser(user);
+// }
+
+final exitColumn = Container(
+  padding: const EdgeInsets.fromLTRB(20, 30, 20, 20),
+  child: Column(
+    children: [
+      Icon(Icons.exit_to_app, color: Color.fromARGB(255, 206, 64, 54)),
+      const Text('Saída'),
+    ],
+  ),
+);
+
+final roomStatus = Container(
+    padding: const EdgeInsets.fromLTRB(20, 30, 20, 20),
+    child: Column(
+      children: [
+        Icon(Icons.room_preferences_rounded, color: Colors.green[500]),
+        const Text('Nome'), //Trazer informações da Sala (nome)
+        const Text('Senha:'), //Trazer informação Senha Sala
+      ],
+    ));
