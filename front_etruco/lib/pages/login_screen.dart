@@ -1,5 +1,6 @@
 //import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:front_etruco/pages/lobby_screen.dart';
 //import 'package:flutter/widgets.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -16,8 +17,8 @@ class LoginScreen extends StatelessWidget {
           children: [
             Image.asset(
               'lib/imagens/icon_cards.png',
-              width: 160,
-              height: 160,
+              width: 130,
+              height: 130,
             ),
             const Text('Etruco',
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
@@ -39,7 +40,35 @@ class LoginScreen extends StatelessWidget {
                 const SizedBox(width: 30),
                 ElevatedButton(
                   child: const Text('Entrar em Partida'),
-                  onPressed: () {},
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        // Cria um TextEditingController para capturar o código da sala
+                        TextEditingController roomCodeController =
+                            TextEditingController();
+                        return AlertDialog(
+                          title: const Text('Insira o Código da Sala'),
+                          content: TextField(
+                            controller: roomCodeController,
+                            decoration: const InputDecoration(
+                                hintText: 'Código da Sala'),
+                          ),
+                          actions: [
+                            ElevatedButton(
+                              child: const Text('Confirmar'),
+                              onPressed: () {
+                                //aqui tem que mandar o codigo para o server para verificar a sala
+                                Navigator.of(context).pop();
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => const LobbyScreen()));
+                              },
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                  },
                 ),
               ],
             )
