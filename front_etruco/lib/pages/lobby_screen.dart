@@ -1,21 +1,10 @@
 import 'package:flutter/material.dart';
 // ignore: unused_import
-import 'package:front_etruco/main.dart';
+// import 'package:front_etruco/main.dart';
 import 'package:front_etruco/widget/botton.dart';
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
-  // @override
-  // Widget build(BuildContext context) {
-  //   return const MaterialApp('
-  //     home: Scaffold(
-  //       body: Center(
-  //         child: Text('Hello Ícaro!'),
-  //       ),
-  //     ),
-  //   );
-  // }
+class LobbyScreen extends StatelessWidget {
+  const LobbyScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
