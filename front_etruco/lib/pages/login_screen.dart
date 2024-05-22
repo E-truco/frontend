@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -7,23 +8,25 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber,
+      backgroundColor: const Color.fromARGB(255, 36, 255, 131),
       body: Padding(
         padding: const EdgeInsets.all(30),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Image.asset('lib/imagens/icon_cards.png', width: 5, height: 5),
+          children: [
+            Image.asset(
+              'lib/imagens/icon_cards.png',
+              width: 180,
+              height: 180,
+            ),
             const Text('Etruco',
                 style: TextStyle(fontSize: 60, fontWeight: FontWeight.bold)),
-            const SizedBox(height: 30),
             const TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Escolha seu Nickname:',
               ),
             ),
-            const SizedBox(height: 30),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
