@@ -35,7 +35,12 @@ class LoginScreen extends StatelessWidget {
               children: [
                 ElevatedButton(
                   child: const Text('Criar Sala'),
-                  onPressed: () {},
+                  onPressed: () {
+                    // Criar uma sala antes de enviar para a LobbyScreen
+                    Navigator.of(context).pop();
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const LobbyScreen()));
+                  },
                 ),
                 const SizedBox(width: 30),
                 ElevatedButton(
@@ -58,7 +63,7 @@ class LoginScreen extends StatelessWidget {
                             ElevatedButton(
                               child: const Text('Confirmar'),
                               onPressed: () {
-                                //aqui tem que mandar o codigo para o server para verificar a sala
+                                //Criar um verificador de existencia de sala
                                 Navigator.of(context).pop();
                                 Navigator.of(context).push(MaterialPageRoute(
                                     builder: (context) => const LobbyScreen()));

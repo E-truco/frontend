@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 // ignore: unused_import
 // import 'package:front_etruco/main.dart';
 import 'package:front_etruco/widget/botton.dart';
+import 'package:front_etruco/pages/card_screen.dart';
 
 class LobbyScreen extends StatelessWidget {
   const LobbyScreen({super.key});
