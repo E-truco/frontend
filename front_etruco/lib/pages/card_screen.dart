@@ -13,7 +13,7 @@ class CardScreen extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children: [
             _buildAnimatedCard(),
             const SizedBox(height: 20),
             _buildAnimatedCard(),
@@ -38,5 +38,5 @@ class CardScreen extends StatelessWidget {
         // Adicione seus assets aqui
       ),
     );
-  }
+}   
 }
