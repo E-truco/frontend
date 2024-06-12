@@ -1,6 +1,6 @@
 //import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:front_etruco/pages/lobby_second_screen.dart';
+import 'package:front_etruco/pages/lobby_screen.dart';
 import 'package:front_etruco/widget/room_modal.dart';
 import 'package:front_etruco/widget/rounded_button.dart';
 //import 'package:flutter/widgets.dart';

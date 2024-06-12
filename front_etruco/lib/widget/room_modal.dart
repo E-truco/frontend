@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:front_etruco/pages/lobby_second_screen.dart';
+import 'package:front_etruco/pages/lobby_screen.dart';
 
 class RoomModal extends StatelessWidget {
   const RoomModal({super.key});
