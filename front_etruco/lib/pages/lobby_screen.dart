@@ -32,16 +32,58 @@ class LobbyScreen extends StatelessWidget {
                 decoration: decoration('Equipe 1'),
                 //controller: controllerName,
               ),
+              const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    SizedBox(height: 20),
+                    TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Jogador 1',
+                      ),
+                    ),
+                  ]),
+              const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    SizedBox(height: 20),
+                    TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Jogador 2',
+                      ),
+                    ),
+                  ]),
+              TextField(
+                decoration: decoration('Equipe 2'),
+                //controller: controllerName,
+              ),
+              const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    SizedBox(height: 20),
+                    TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Jogador 3',
+                      ),
+                    ),
+                  ]),
+              const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    SizedBox(height: 20),
+                    TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Jogador 4',
+                      ),
+                    ),
+                  ]),
 
               const SizedBox(height: 24),
-              TextField(
-                decoration: decoration('Age'),
-                //keyboardType: TextInputType.number,
-                //controller: controllerAge,
-              ),
-              const SizedBox(height: 24),
               Botton(
-                title: 'Login',
+                title: 'Pronto',
                 onPressed: () {
                   Navigator.pushNamed(context, '/login');
                 },
@@ -73,22 +115,6 @@ InputDecoration decoration(String label) {
   );
 }
 
-// void createUser() {
-//   final newUser = User(
-//     name: controllerName.text,
-//     age: int.parse(controllerAge.text),
-//     birthday: DateTime.parse(controllerDate.text),
-//   );
-//   UserService.createUser(newUser);
-// }
-
-// void updateUser(User user) {
-//   user.name = controllerName.text;
-//   user.age = int.parse(controllerAge.text);
-//   user.birthday = DateTime.parse(controllerDate.text);
-//   UserService.updateUser(user);
-// }
-
 final exitColumn = Container(
   color: Colors.red,
   padding: const EdgeInsets.fromLTRB(20, 30, 20, 20),
@@ -110,11 +136,3 @@ final roomStatus = Container(
         const Text('Senha:'), //Trazer informação Senha Sala
       ],
     ));
-
-final equipe1 = Container(
-  color: Colors.amber[200],
-);
-
-final equipe2 = Container(
-  color: Colors.cyan[300],
-);
