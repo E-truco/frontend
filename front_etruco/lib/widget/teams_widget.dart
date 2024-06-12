@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:front_etruco/pages/card_screen.dart';
 import 'package:front_etruco/widget/team_widget.dart';
 
 class TeamsWidget extends StatelessWidget {
@@ -15,7 +16,8 @@ class TeamsWidget extends StatelessWidget {
         const Text('Convite: 24b/19'), // Contador de convites
         ElevatedButton(
           onPressed: () {
-            // Implementar ação para iniciar o jogo
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const CardScreen()));
           },
           child: const Text('Iniciar Jogo'),
         ),
