@@ -1,6 +1,7 @@
 //import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:front_etruco/pages/lobby_second_screen.dart';
+import 'package:front_etruco/widget/room_modal.dart';
 import 'package:front_etruco/widget/rounded_button.dart';
 //import 'package:flutter/widgets.dart';
 
@@ -9,10 +10,15 @@ class LoginScreen extends StatelessWidget {
 
   void navigateToLobbyScreen(BuildContext context) {
     Navigator.of(context).pop();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => const LobbyScreen()));
-    });
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => const LobbyScreen()));
+  }
+
+  void showMatchDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (_) => const RoomModal(),
+    );
   }
 
   @override
@@ -47,7 +53,10 @@ class LoginScreen extends StatelessWidget {
                   onPressed: () => navigateToLobbyScreen(context),
                 ),
                 const SizedBox(width: 30),
-                ElevatedButton(onPressed: () {  }, child: null,),
+                RoundedButton(
+                  'Entrar em Partida',
+                  onPressed: () => showMatchDialog(context),
+                ),
               ],
             )
           ],
