@@ -1,60 +1,76 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
+import 'package:front_etruco/pages/login_screen.dart'; // Import the correct file as needed
+import 'dart:async';
 import 'package:socket_io_client/socket_io_client.dart' as IO;
 
-void main() => runApp(const MyApp());
-
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
-
-  @override
-  _MyAppState createState() => _MyAppState();
+void main() {
+  runApp(const MainApp());
 }
 
-class _MyAppState extends State<MyApp> {
-  late IO.Socket socket;
-  final _streamController = StreamController<String>();
+class MainApp extends StatefulWidget {
+  const MainApp({Key? key}) : super(key: key);
 
-  String socketUrl() {
-    return "http://10.199.10.231:4201";
-  }
+  @override
+  _MainAppState createState() => _MainAppState();
+}
+
+class _MainAppState extends State<MainApp> {
+  late final SocketManager _socketManager;
 
   @override
   void initState() {
     super.initState();
-
-    // Connect to the Socket.IO server
-    socket = IO.io(socketUrl(), <String, dynamic>{
-      'transports': ['websocket'],
-    });
-
-    // Event listener for 'connect' event
-    socket.on('connect', (_) {
-      print('Connected to server');
-    });
-
-    // Listen for messages from the server
-    socket.on('message', (data) {
-      _streamController.add(data);
-    });
-
-    socket.emit('joinRoom',['victor', 'testes']);
+    _socketManager = SocketManager();
+    _socketManager.connect();
   }
 
   @override
   void dispose() {
-    socket.dispose();
-    _streamController.close();
+    _socketManager.dispose();
     super.dispose();
   }
-  
+
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return MaterialApp(
+      home: LoginScreen(), // Adjust as per your app structure
+    );
   }
-
-  
 }
 
+class SocketManager {
+  late final IO.Socket _socket;
+  final _streamController = StreamController<String>();
+
+  SocketManager() : _socket = _initializeSocket();
+
+  static IO.Socket _initializeSocket() {
+    return IO.io(
+      "http://10.199.10.231:4201",
+      <String, dynamic>{
+        'transports': ['websocket'],
+      },
+    );
+  }
+
+  void connect() {
+    _socket.connect();
+
+    // Event listener for 'connect' event
+    _socket.on('connect', (_) {
+      print('Connected to server');
+    });
+
+    // Listen for messages from the server
+    _socket.on('message', (data) {
+      _streamController.add(data);
+    });
+
+    _socket.emit('joinRoom', ['victor', 'testes']);
+  }
+
+  void dispose() {
+    _socket.dispose();
+    _streamController.close();
+  }
+}
