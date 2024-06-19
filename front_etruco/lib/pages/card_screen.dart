@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:front_etruco/models/card_model.dart';
-import 'package:front_etruco/widget/adjustable_card.dart';
+import 'package:front_etruco/widgets/adjustable_card.dart';
 
 class CardScreen extends StatelessWidget {
   const CardScreen({super.key});

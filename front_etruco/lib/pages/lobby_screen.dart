@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:front_etruco/widget/teams_widget.dart';
+import 'package:front_etruco/widgets/teams_widget.dart';
 
 class LobbyScreen extends StatelessWidget {
   const LobbyScreen({super.key});

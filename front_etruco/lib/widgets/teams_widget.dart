@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:front_etruco/pages/card_screen.dart';
-import 'package:front_etruco/widget/team_widget.dart';
+import 'package:front_etruco/widgets/team_widget.dart';
 
 class TeamsWidget extends StatelessWidget {
   const TeamsWidget({super.key});
