@@ -19,6 +19,8 @@ class RoomModal extends StatelessWidget {
           child: const Text('Confirmar'),
           onPressed: () {
             //Criar um verificador de existencia de sala
+            // var message = await sendMessageToServer(bla);
+            // var players = 
             Navigator.of(context).pop();
             Navigator.of(context).push(
                 MaterialPageRoute(builder: (context) => const LobbyScreen()));

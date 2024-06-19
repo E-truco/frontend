@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:front_etruco/models/player_model.dart';
 
 class TeamWidget extends StatelessWidget {
   final String title;
-  final List<String> players;
+  final List<PlayerModel> players;
 
   const TeamWidget({super.key, required this.title, required this.players});
 
@@ -17,7 +18,7 @@ class TeamWidget extends StatelessWidget {
           itemCount: players.length,
           itemBuilder: (context, index) {
             return ListTile(
-              title: Text(players[index]),
+              title: Text(players[index].nickname),
             );
           },
         ),
