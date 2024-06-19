@@ -32,7 +32,7 @@ class _MainAppState extends State<MainApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: LoginScreen(), // Adjust as per your app structure
     );
   }
