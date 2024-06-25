@@ -1,4 +1,3 @@
-import 'package:front_etruco/models/player_model.dart';
 import 'package:front_etruco/models/player_round_model.dart';
 import 'package:front_etruco/models/team_model.dart';
 
