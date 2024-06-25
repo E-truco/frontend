@@ -1,0 +1,1 @@
+### Frontend isolado do projeto.
