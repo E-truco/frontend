@@ -12,7 +12,11 @@ class LobbyScreen extends StatelessWidget {
         padding: EdgeInsets.all(30),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [TeamsWidget()],
+          children: [
+            TeamsWidget(
+              players: [],
+            )
+          ],
         ),
       ),
     );
